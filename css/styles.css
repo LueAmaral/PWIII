@@ -1,0 +1,13 @@
+body {
+ background-color: gray;
+ margin: 0;
+}
+
+header {
+ background-color: rgba(0,0,0,0.5);
+ width: 100%;
+ color: white;
+ padding: 10px;
+ font-family: Arial;
+ font-size: 30px;
+}
