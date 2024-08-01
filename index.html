@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Netflix</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <img src="img/logo.png" alt="Netflix" class="logo">
-            </nav>
-            <section>
-                <div class="login-container">
-                    <h1>Entrar</h1>
-                    <form action="login.php" method="post">
-                        <input type="text" name="user" id="user" placeholder="Usuário">
-                        <input type="password" name="password" id="password" placeholder="Senha">
-                        <button type="submit">Entrar</button>
-                    </form>
-                </div>
-            </section>
-        </header>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<title>Netflix</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="img/logo.png" alt="Netflix" class="logo" />
+			</nav>
+			<section>
+				<div class="login-container">
+					<h1>Entrar</h1>
+					<form aria-label="Entrar" method="post">
+						<div class="input-container">
+							<input
+								type="text"
+								class="input-field"
+								autocomplete="email"
+								id=":r0:"
+								name="userLoginId"
+								value=""
+                placeholder=" "
+								aria-describedby=":r1:"
+								aria-invalid="true"
+							/>
+							<label for=":r0:" class="floating-label"
+								>Email ou número de celular</label
+							>
+							<div aria-hidden="true"></div>
+							<div data-uia="login-field+validationMessage" id=":r1:"></div>
+						</div>
+
+						<div class="input-container">
+							<input
+								type="password"
+								class="input-field"
+								autocomplete="password"
+								id=":r3:"
+								name="password"
+							/>
+							<label for=":r3:" class="floating-label">Senha</label>
+							<div aria-hidden="true"></div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</header>
+	</body>
 </html>
