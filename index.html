@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
+		<title>Netflix</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>Netflix</title>
 	</head>
 	<body>
 		<header class="header-bg">
@@ -36,97 +36,29 @@
 			<div class="header-login">
 				<div class="login-container">
 					<h1>Entrar</h1>
-					<form aria-label="Entrar" method="post">
-						<div class="input-container">
-							<input
-								type="text"
-								class="input-login"
-								autocomplete="email"
-								id=":r0:"
-								name="userLoginId"
-								value=""
-								placeholder=" "
-								aria-describedby=":r1:"
-								aria-invalid="true"
-							/>
-							<label for=":r0:" class="label-login"
-								>Email ou número de celular</label
-							>
-							<div aria-hidden="true"></div>
-							<div data-uia="login-field+validationMessage" id=":r1:"></div>
-						</div>
-
-						<div class="input-container">
-							<input
-								type="password"
-								class="input-login"
-								autocomplete="password"
-								id=":r3:"
-								name="password"
-								value=""
-								placeholder=" "
-							/>
-							<label for=":r3:" class="label-login">Senha</label>
-							<div aria-hidden="true"></div>
-						</div>
-
-						<button type="submit" class="button-primary">Entrar</button>
-						<p class="between-buttons">OU</p>
-						<button type="button" class="button-secondary">
-							Usar um código de acesso
-						</button>
-						<a href="https://www.netflix.com/LoginHelp" class="password-link">Esqueceu a senha?</a>
-					</form>
-          <footer class="footer-login">
-            <div class="remember-container">
-              <div
-                data-uia="remember-me-field+container"
-                class="default-ltr-cache-ix6pra"
-              >
-                <div class="input-remember">
-                  <input
-                    type="checkbox"
-                    id=":Rairlpp:"
-                    name="rememberMe"
-                    data-uia="remember-me-field"
-                    checked=""
-                  />
-                  <div aria-hidden="true" class="remember-svg">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      role="img"
-                      data-icon="CheckmarkSmall"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M13.4696 3.46973L14.5303 4.53039L6.53026 12.5304C6.23737 12.8233 5.7625 12.8233 5.4696 12.5304L1.4696 8.53039L2.53026 7.46973L5.99993 10.9394L13.4696 3.46973Z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <label
-                  for=":Rairlpp:"
-                  data-uia="remember-me-field+label"
-                  class="remember-text"
-                  >Lembre-se de mim</label
-                >
-              </div>
+          <form method="post">
+            <div class="input-container">
+                <input type="text" class="input-login" autocomplete="email" id="userLoginId" name="userLoginId" placeholder=" ">
+                <label for="userLoginId" class="label-login">Email ou número de celular</label>
             </div>
-            <p
-              data-uia="login-signup-now"
-              class="new-here-text"
-            >
-              Novo por aqui?
-              <a class="link" target="_self" href="https://www.netflix.com/">Assine agora</a>.
-            </p>
-          </footer>
+            <div class="input-container">
+                <input type="password" class="input-login" autocomplete="password" id="password" name="password" placeholder=" ">
+                <label for="password" class="label-login">Senha</label>
+            </div>
+            <button type="submit" class="button-primary">Entrar</button>
+            <p class="between-buttons">OU</p>
+            <button type="button" class="button-secondary">Usar um código de acesso</button>
+            <a href="https://www.netflix.com/LoginHelp" class="password-link">Esqueceu a senha?</a>
+        </form>
+					<footer class="footer-login">
+            <div class="remember-container">
+              <div class="input-remember">
+                  <input type="checkbox" id="rememberMe" name="rememberMe" checked>
+                  <label for="rememberMe" class="remember-text">Lembre-se de mim</label>
+              </div>
+          </div>
+            <p class="new-here-text">Novo por aqui? <a class="link" target="_self" href="https://www.netflix.com/">Assine agora</a>.</p>
+        </footer>
 				</div>
 			</div>
 		</header>
