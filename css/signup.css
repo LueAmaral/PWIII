@@ -40,7 +40,7 @@ section {
 }
 
 h1 {
-	color: white;
+	color: black;
 	font-size: 2rem;
 	font-weight: 700;
 	padding-bottom: 12px;
@@ -66,18 +66,24 @@ h1 {
 }
 
 .login-container {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: transparent;
 	padding: 48px 68px;
 	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
-	max-width: 450px;
+	min-width: 500px;
+}
+
+input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    height: 10px;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
 }
 
 .input-login {
@@ -85,10 +91,9 @@ form {
 	padding: 8px;
 	padding-top: 24px;
 	border-radius: 8px;
-	border: 1px solid #ccc;
-	background-color: rgba(20, 20, 20, 0.7);
+	border: 1px solid black;
 	width: 100%;
-	color: white;
+	color: back;
 }
 
 .label-login {
@@ -96,7 +101,8 @@ form {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1rem;
-	height: auto;
+    width: 500px;
+	height: 0;
 	position: relative;
 	top: -45px;
 	left: 15px;
