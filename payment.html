@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/signup.css" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="js/address.js"></script>
+		<script src="js/payment.js"></script>
 	</head>
 	<body>
 		<header>
@@ -37,74 +37,63 @@
 			</header>
 			<div class="header-login">
 				<div class="login-container">
-					<h1>Endereço</h1>
-					<form method="post">
+					<h1>Pagamento</h1>
+					<form id="paymentForm">
 						<div class="input-container">
 							<input
 								type="text"
 								class="input-login"
-								id="cep"
-								name="cep"
+								id="cardNumber"
+								name="cardNumber"
 								placeholder=" "
-								onblur="buscaCEP()"
-								oninput="this.value = mascaraCEP(this.value)"
+								required
+								maxlength="19"
 							/>
-							<label for="cep" class="label-login">CEP</label>
+							<label for="cardNumber" class="label-login">Número do Cartão</label>
 						</div>
 						<div class="input-container">
 							<input
 								type="text"
 								class="input-login"
-								id="logradouro"
-								name="logradouro"
+								id="cardHolderName"
+								name="cardHolderName"
 								placeholder=" "
-								readonly
 								required
 							/>
-							<label for="logradouro" class="label-login">Logradouro</label>
+							<label for="cardHolderName" class="label-login">Nome no Cartão</label>
 						</div>
 						<div class="input-container">
 							<input
 								type="text"
 								class="input-login"
-								id="bairro"
-								name="bairro"
+								id="cardExpiry"
+								name="cardExpiry"
 								placeholder=" "
-								readonly
+								pattern="\d{2}/\d{2}"
+								required
+								maxlength="5"
 							/>
-							<label for="bairro" class="label-login">Bairro</label>
+							<label for="cardExpiry" class="label-login"
+								>Data de Validade (MM/AA)</label
+							>
 						</div>
 						<div class="input-container">
 							<input
 								type="text"
 								class="input-login"
-								id="cidade"
+								id="cardCVV"
+								name="cardCVV"
 								placeholder=" "
-								name="cidade"
-								readonly
+								pattern="\d{3}"
+								required
+								maxlength="3"
 							/>
-							<label for="cidade" class="label-login">Cidade</label>
+							<label for="cardCVV" class="label-login">CVV</label>
 						</div>
-						<div class="input-container">
-							<input
-								type="text"
-								class="input-login"
-								id="estado"
-								placeholder=" "
-								name="estado"
-								readonly
-							/>
-							<label for="estado" class="label-login">Estado</label>
-						</div>
-						<button type="submit" class="button-primary" onclick="payment()">Continuar</button>
+						<button type="submit" class="button-primary">Pagar</button>
 					</form>
 				</div>
 			</div>
 		</header>
-		<script>
-			function payment(){
-                window.location.href = 'payment.html';
-            }
-		</script>
 	</body>
 </html>
